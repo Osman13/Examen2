@@ -3,7 +3,10 @@ package com.mygdx.game;
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
+<<<<<<< HEAD
 import com.badlogic.gdx.audio.Sound;
+=======
+>>>>>>> ec4835d6cf9c805f0acda3b78986100536e0ee32
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -34,6 +37,7 @@ public class MyGdxGame extends ApplicationAdapter {
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
+<<<<<<< HEAD
 		Sound back = Gdx.audio.newSound(Gdx.files.internal("fire.ogg"));
 		back.play(1.0f);
 		background = new Texture("background.png");
@@ -45,6 +49,15 @@ public class MyGdxGame extends ApplicationAdapter {
 		papel2 = new Texture("papel.png");
 		tijera2 = new Texture("tijera.png");
 
+=======
+		background = new Texture("background.png");
+		tijera1 = new Texture("tijera.png");
+		piedra1 = new Texture("piedra.png");
+		papel1 = new Texture("papel.png");
+		piedra2 = new Texture("piedra.png");
+		papel2 = new Texture("papel.png");
+		tijera2 = new Texture("tijera.png");
+>>>>>>> ec4835d6cf9c805f0acda3b78986100536e0ee32
 		ganador = new Texture("ganador.png");
 		perdedor = new Texture("perdedor.png");
 		empate = new Texture("empatado.png");
@@ -100,8 +113,11 @@ public class MyGdxGame extends ApplicationAdapter {
 
 		if(click) {
 			if (Gdx.input.isKeyPressed(Input.Keys.A)) {
+<<<<<<< HEAD
 				Sound sound = Gdx.audio.newSound(Gdx.files.internal("Pop.ogg"));
 				sound.play(1.0f);
+=======
+>>>>>>> ec4835d6cf9c805f0acda3b78986100536e0ee32
 				visibletijera1 = true;
 				switch (computer_choice) {
 					case 1:
@@ -117,12 +133,17 @@ public class MyGdxGame extends ApplicationAdapter {
 						break;
 				}
 				if (computer_choice == 1) {
+<<<<<<< HEAD
 					Sound go = Gdx.audio.newSound(Gdx.files.internal("Game_Over.ogg"));
 					go.play(1.0f);
 					visibleperdedor = true;
 				} else if (computer_choice == 2) {
 					Sound yay = Gdx.audio.newSound(Gdx.files.internal("yay.wav"));
 					yay.play(1.0f);
+=======
+					visibleperdedor = true;
+				} else if (computer_choice == 2) {
+>>>>>>> ec4835d6cf9c805f0acda3b78986100536e0ee32
 					visibleganador = true;
 				} else if (computer_choice == 3) {
 					visibleempate = true;
@@ -133,8 +154,11 @@ public class MyGdxGame extends ApplicationAdapter {
 
 		if(click) {
 			if (Gdx.input.isKeyPressed(Input.Keys.S)) {
+<<<<<<< HEAD
 				Sound sound = Gdx.audio.newSound(Gdx.files.internal("Pop.ogg"));
 				sound.play(1.0f);
+=======
+>>>>>>> ec4835d6cf9c805f0acda3b78986100536e0ee32
 				visiblepiedra1 = true;
 				switch (computer_choice) {
 					case 1:
@@ -152,12 +176,17 @@ public class MyGdxGame extends ApplicationAdapter {
 				if (computer_choice == 1) {
 					visibleempate = true;
 				} else if (computer_choice == 2) {
+<<<<<<< HEAD
 					Sound go = Gdx.audio.newSound(Gdx.files.internal("Game_Over.ogg"));
 					go.play(1.0f);
 					visibleperdedor = true;
 				} else if (computer_choice == 3) {
 					Sound yay = Gdx.audio.newSound(Gdx.files.internal("yay.wav"));
 					yay.play(1.0f);
+=======
+					visibleperdedor = true;
+				} else if (computer_choice == 3) {
+>>>>>>> ec4835d6cf9c805f0acda3b78986100536e0ee32
 					visibleganador = true;
 				}
 				click=false;
@@ -166,8 +195,11 @@ public class MyGdxGame extends ApplicationAdapter {
 
 		if(click) {
 			if (Gdx.input.isKeyPressed(Input.Keys.D)) {
+<<<<<<< HEAD
 				Sound sound = Gdx.audio.newSound(Gdx.files.internal("Pop.ogg"));
 				sound.play(1.0f);
+=======
+>>>>>>> ec4835d6cf9c805f0acda3b78986100536e0ee32
 				visiblepapel1 = true;
 				switch (computer_choice) {
 					case 1:
@@ -184,6 +216,7 @@ public class MyGdxGame extends ApplicationAdapter {
 				}
 				if (computer_choice == 1) {
 					visibleganador = true;
+<<<<<<< HEAD
 					//visiblepiedra2 = true;
 					Sound yay = Gdx.audio.newSound(Gdx.files.internal("yay.wav"));
 					yay.play(1.0f);
@@ -195,6 +228,15 @@ public class MyGdxGame extends ApplicationAdapter {
 					Sound go = Gdx.audio.newSound(Gdx.files.internal("Game_Over.ogg"));
 					go.play(1.0f);
 					//visibletijera2 = true;
+=======
+					visiblepiedra2 = true;
+				} else if (computer_choice == 2) {
+					visibleempate = true;
+					visiblepapel2 = true;
+				} else if (computer_choice == 3) {
+					visibleperdedor = true;
+					visibletijera2 = true;
+>>>>>>> ec4835d6cf9c805f0acda3b78986100536e0ee32
 				}
 				click=false;
 			}
